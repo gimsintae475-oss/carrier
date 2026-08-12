@@ -1,0 +1,21 @@
+# 로컬 및 배포 환경변수
+.env
+.env.*
+!.env.example
+
+# 환경변수로 생성되는 브라우저 설정과 production 산출물
+config.js
+dist/
+
+# 로컬 테스트 부산물
+*.log
+*-mobile.png
+*-desktop.png
+.tmp-*/
+
+# 초기 기획 원본은 로컬 참고 자료로만 유지합니다.
+\# 에어컨 리워드 웹앱 프롬프트.txt
+
+# 운영체제 파일
+.DS_Store
+Thumbs.db
