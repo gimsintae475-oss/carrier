@@ -42,9 +42,13 @@ cp -- \
   "$PROJECT_ROOT/index.html" \
   "$PROJECT_ROOT/styles.css" \
   "$PROJECT_ROOT/app.js" \
+  "$PROJECT_ROOT/motion-enhancements.js" \
   "$PROJECT_ROOT/supabase-client.js" \
   "$PROJECT_ROOT/weather-service.js" \
   "$DIST_DIR/"
+
+# 보미 캐릭터와 이후 추가될 정적 이미지를 함께 배포합니다.
+cp -R -- "$PROJECT_ROOT/assets" "$DIST_DIR/assets"
 
 # 정적 사이트는 런타임 환경변수를 읽을 수 없으므로 공개 설정 파일을 빌드 시 생성합니다.
 {
