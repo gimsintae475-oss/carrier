@@ -1,25 +1,31 @@
 :root {
-  --blue-950: #0b2f5b;
-  --blue-800: #0759ad;
-  --blue-700: #0876db;
-  --blue-600: #1593ee;
-  --blue-200: #bfe3ff;
-  --blue-100: #e2f3ff;
-  --blue-50: #f3f9ff;
-  --green-700: #11845b;
-  --green-500: #39bd83;
-  --green-100: #ddf8ec;
+  --blue-950: #17466b;
+  --blue-800: #126fb8;
+  --blue-700: #1789d5;
+  --blue-600: #43aceb;
+  --blue-200: #bde8ff;
+  --blue-100: #e7f6ff;
+  --blue-50: #f5fbff;
+  --green-700: #27875f;
+  --green-500: #64c99a;
+  --green-100: #e5f9ee;
+  --mint-200: #c9f1df;
+  --mint-100: #effbf5;
+  --yellow-300: #ffe28a;
+  --yellow-100: #fff8d9;
+  --lavender-200: #ddd8ff;
+  --lavender-100: #f5f2ff;
   --red-700: #bd2c3d;
   --red-100: #ffe6e9;
-  --ink: #17334f;
-  --muted: #6d8194;
-  --line: #e5edf5;
+  --ink: #244760;
+  --muted: #71899a;
+  --line: #dfedf2;
   --white: #ffffff;
-  --shadow-sm: 0 8px 24px rgb(31 91 145 / 8%);
-  --shadow-md: 0 20px 50px rgb(8 82 148 / 15%);
-  --radius-sm: 14px;
-  --radius-md: 22px;
-  --radius-lg: 30px;
+  --shadow-sm: 0 10px 28px rgb(52 127 164 / 9%);
+  --shadow-md: 0 22px 55px rgb(37 127 168 / 14%);
+  --radius-sm: 17px;
+  --radius-md: 25px;
+  --radius-lg: 34px;
   --content-width: 760px;
 }
 
@@ -36,8 +42,10 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 10% -10%, rgb(118 198 255 / 30%), transparent 32rem),
-    linear-gradient(180deg, #f8fcff 0%, #eef7ff 100%);
+    radial-gradient(circle at 8% 8%, rgb(255 226 138 / 34%), transparent 18rem),
+    radial-gradient(circle at 88% 16%, rgb(201 241 223 / 55%), transparent 24rem),
+    radial-gradient(circle at 18% 84%, rgb(221 216 255 / 42%), transparent 25rem),
+    linear-gradient(180deg, #fbfeff 0%, #f0fbf7 48%, #eef8ff 100%);
   font-family: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -81,7 +89,10 @@ svg {
   max-width: var(--content-width);
   min-height: 100dvh;
   margin: 0 auto;
-  background: rgb(255 255 255 / 82%);
+  background:
+    radial-gradient(circle at 8% 11%, rgb(255 226 138 / 13%) 0 4px, transparent 5px),
+    radial-gradient(circle at 91% 34%, rgb(100 201 154 / 11%) 0 5px, transparent 6px),
+    rgb(255 255 255 / 84%);
 }
 
 .top-header {
@@ -93,8 +104,8 @@ svg {
   justify-content: space-between;
   height: 74px;
   padding: 0 20px;
-  background: rgb(255 255 255 / 88%);
-  border-bottom: 1px solid rgb(229 237 245 / 80%);
+  background: rgb(255 255 255 / 90%);
+  border-bottom: 1px solid rgb(201 241 223 / 72%);
   backdrop-filter: blur(16px);
 }
 
@@ -110,9 +121,10 @@ svg {
   height: 40px;
   place-items: center;
   color: var(--white);
-  background: linear-gradient(145deg, var(--blue-600), var(--blue-800));
-  border-radius: 14px;
-  box-shadow: 0 8px 18px rgb(8 118 219 / 25%);
+  background: linear-gradient(145deg, #58baf0, var(--blue-800));
+  border: 2px solid rgb(255 255 255 / 75%);
+  border-radius: 16px 16px 16px 7px;
+  box-shadow: 0 9px 20px rgb(23 137 213 / 22%);
 }
 
 .brand-mark svg {
@@ -153,9 +165,9 @@ svg {
   padding: 0;
   place-items: center;
   color: var(--blue-800);
-  background: var(--blue-50);
-  border: 1px solid var(--blue-100);
-  border-radius: 14px;
+  background: linear-gradient(145deg, var(--white), var(--mint-100));
+  border: 1px solid var(--mint-200);
+  border-radius: 16px 16px 8px 16px;
   cursor: pointer;
 }
 
@@ -2624,6 +2636,512 @@ h2 {
   outline-offset: 3px;
 }
 
+/* 봄 꽃밭 테마: 기존 기능 색상 체계를 유지하며 정상 화면에만 산뜻한 장식을 더합니다. */
+.welcome-row {
+  position: relative;
+  padding: 10px 5px 25px;
+}
+
+.welcome-row::after {
+  position: absolute;
+  right: 70px;
+  bottom: 13px;
+  width: 48px;
+  height: 10px;
+  background: var(--mint-200);
+  border-radius: 50%;
+  content: "";
+  filter: blur(1px);
+  opacity: 0.45;
+}
+
+.welcome-row .eyebrow span {
+  display: inline-block;
+  margin-right: 3px;
+  color: #e3af21;
+  font-size: 0.95rem;
+  transform: rotate(-10deg);
+}
+
+.welcome-row h1 {
+  color: var(--blue-950);
+  text-shadow: 0 2px 0 rgb(255 255 255 / 85%);
+}
+
+.mascot {
+  position: relative;
+}
+
+.mascot::before {
+  position: absolute;
+  z-index: 2;
+  top: 1px;
+  left: 16px;
+  color: #e9b82f;
+  content: "✿";
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+  text-shadow: 0 2px 0 var(--white);
+  transform: rotate(-16deg);
+}
+
+.mascot-leaf {
+  fill: #e9fbf2;
+  stroke: #68c89d;
+}
+
+.hero-card {
+  min-height: 326px;
+  background:
+    radial-gradient(circle at 88% 12%, rgb(255 255 255 / 32%), transparent 9rem),
+    radial-gradient(circle at 12% 92%, rgb(255 226 138 / 26%), transparent 9rem),
+    linear-gradient(145deg, #55b9ef 0%, #258fd8 55%, #1470b8 100%);
+  border: 1px solid rgb(255 255 255 / 60%);
+  box-shadow: 0 24px 55px rgb(30 133 185 / 20%);
+}
+
+.hero-card__copy {
+  padding-bottom: 52px;
+}
+
+.status-chip {
+  color: var(--blue-950);
+  background: var(--yellow-100);
+  border-color: rgb(255 255 255 / 70%);
+  box-shadow: 0 5px 14px rgb(18 111 184 / 12%);
+}
+
+.hero-card h2 {
+  text-shadow: 0 2px 0 rgb(18 86 139 / 18%);
+}
+
+.primary-button,
+.wallet-mission-link {
+  border-radius: 17px 17px 17px 8px;
+  box-shadow: 0 10px 22px rgb(15 88 142 / 17%);
+}
+
+.hero-orbit {
+  z-index: 2;
+  right: 4px;
+  bottom: 18px;
+  border-color: rgb(255 255 255 / 35%);
+}
+
+.hero-orbit__planet {
+  background: linear-gradient(145deg, #f8fdff, #d6f4ff);
+  border-color: rgb(255 255 255 / 55%);
+}
+
+.hero-orbit__leaf {
+  color: var(--yellow-300);
+}
+
+.hero-meadow {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 210px;
+  height: 74px;
+  pointer-events: none;
+}
+
+.hero-meadow::before,
+.hero-meadow::after {
+  position: absolute;
+  right: -24px;
+  bottom: -36px;
+  width: 240px;
+  height: 86px;
+  background: rgb(164 232 199 / 32%);
+  border-radius: 50% 50% 0 0;
+  content: "";
+  transform: rotate(-4deg);
+}
+
+.hero-meadow::after {
+  right: 55px;
+  bottom: -55px;
+  background: rgb(255 226 138 / 26%);
+  transform: rotate(7deg);
+}
+
+.hero-bloom {
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  background: var(--yellow-300);
+  border-radius: 50%;
+  box-shadow:
+    0 -8px 0 2px rgb(255 255 255 / 96%),
+    0 8px 0 2px rgb(255 255 255 / 96%),
+    8px 0 0 2px rgb(255 255 255 / 96%),
+    -8px 0 0 2px rgb(255 255 255 / 96%);
+}
+
+.hero-bloom::after {
+  position: absolute;
+  top: 9px;
+  left: 4px;
+  width: 2px;
+  height: 32px;
+  background: #75ce9e;
+  border-radius: 999px;
+  content: "";
+}
+
+.hero-bloom--one {
+  right: 166px;
+  bottom: 44px;
+  transform: scale(0.72) rotate(-8deg);
+}
+
+.hero-bloom--two {
+  right: 92px;
+  bottom: 57px;
+  transform: scale(0.58) rotate(12deg);
+}
+
+.hero-bloom--three {
+  right: 24px;
+  bottom: 42px;
+  transform: scale(0.68) rotate(-5deg);
+}
+
+.hero-sprout {
+  position: absolute;
+  z-index: 2;
+  bottom: 4px;
+  width: 24px;
+  height: 35px;
+  border-left: 2px solid #76d0a1;
+}
+
+.hero-sprout::before,
+.hero-sprout::after {
+  position: absolute;
+  width: 13px;
+  height: 8px;
+  background: #a9e8c8;
+  border-radius: 100% 0 100% 0;
+  content: "";
+}
+
+.hero-sprout::before {
+  top: 8px;
+  left: 0;
+  transform: rotate(15deg);
+}
+
+.hero-sprout::after {
+  top: 17px;
+  left: -13px;
+  transform: scaleX(-1) rotate(15deg);
+}
+
+.hero-sprout--one {
+  right: 140px;
+}
+
+.hero-sprout--two {
+  right: 54px;
+  bottom: -2px;
+  transform: scale(0.8);
+}
+
+.section-heading > div,
+.screen-heading > div {
+  position: relative;
+}
+
+.section-heading h2::after,
+.screen-heading h1::after {
+  display: block;
+  width: 38px;
+  height: 5px;
+  margin-top: 7px;
+  background: linear-gradient(90deg, var(--yellow-300), var(--mint-200));
+  border-radius: 999px;
+  content: "";
+}
+
+.eyebrow {
+  color: var(--blue-700);
+}
+
+.weather-section,
+.aircon-section,
+.transaction-section,
+.order-section {
+  position: relative;
+}
+
+.weather-card:not([data-state="error"]),
+.aircon-card[data-health="normal"],
+.mission-card:not([data-status="failed"]):not(.has-warning),
+.auth-card,
+.profile-card {
+  background:
+    radial-gradient(circle at 94% 5%, rgb(255 226 138 / 22%), transparent 7rem),
+    radial-gradient(circle at 5% 96%, rgb(201 241 223 / 25%), transparent 8rem),
+    var(--white);
+  border-color: #cfeaf1;
+}
+
+.weather-card,
+.aircon-card,
+.mission-card,
+.auth-card,
+.profile-card {
+  box-shadow: 0 18px 45px rgb(55 135 166 / 11%);
+}
+
+.weather-source[data-source="live"],
+.connection-badge[data-tone="success"] {
+  color: var(--green-700);
+  background: linear-gradient(135deg, var(--green-100), var(--yellow-100));
+  border: 1px solid var(--mint-200);
+}
+
+.weather-refresh,
+.condition-icon,
+.tip-icon,
+.wallet-info-card span {
+  background: linear-gradient(145deg, var(--white), var(--blue-50));
+  border: 1px solid var(--blue-100);
+  box-shadow: 0 7px 16px rgb(41 135 180 / 8%);
+}
+
+.weather-icon {
+  background: linear-gradient(145deg, var(--yellow-100), var(--blue-100));
+  border: 1px solid rgb(255 226 138 / 68%);
+  border-radius: 24px 24px 24px 10px;
+  box-shadow: inset 0 0 0 5px rgb(255 255 255 / 40%);
+}
+
+.weather-mission,
+.mission-weather-note,
+.wallet-info-card,
+.profile-notice {
+  background: linear-gradient(135deg, var(--mint-100), var(--blue-50));
+  border-color: var(--mint-200);
+}
+
+.device-status-badge,
+.mission-date,
+.order-count {
+  background: linear-gradient(135deg, var(--blue-100), var(--mint-100));
+  border: 1px solid #ccebf0;
+}
+
+.power-button,
+.mission-start-button,
+.auth-submit,
+.purchase-button {
+  background: linear-gradient(135deg, #4bb5ed, var(--blue-800));
+  border-radius: 17px 17px 17px 8px;
+  box-shadow: 0 11px 24px rgb(23 137 213 / 20%);
+}
+
+.aircon-display {
+  background:
+    radial-gradient(circle at 22% 28%, rgb(255 255 255 / 84%) 0 4px, transparent 5px),
+    radial-gradient(circle at 78% 70%, rgb(255 226 138 / 50%) 0 5px, transparent 6px),
+    linear-gradient(145deg, var(--blue-50), var(--mint-100));
+  border: 1px solid #d8eef3;
+}
+
+.aircon-stats {
+  background: #dfeff0;
+  border-color: #dfeff0;
+}
+
+.aircon-stats > div:nth-child(even) {
+  background: #fbfefd;
+}
+
+.summary-card,
+.tip-card,
+.mission-guide,
+.wallet-summary-grid article,
+.transaction-item,
+.reward-product-card,
+.order-item {
+  border-color: #d9ecef;
+  box-shadow: var(--shadow-sm);
+}
+
+.summary-card:nth-child(1),
+.wallet-summary-grid article:nth-child(1) {
+  background: linear-gradient(145deg, var(--white), var(--mint-100));
+}
+
+.summary-card:nth-child(2),
+.wallet-summary-grid article:nth-child(2) {
+  background: linear-gradient(145deg, var(--white), var(--lavender-100));
+}
+
+.tip-card,
+.mission-guide {
+  background: linear-gradient(135deg, var(--yellow-100), var(--white) 62%, var(--mint-100));
+  border-color: #f0e6b9;
+}
+
+.mission-card::before {
+  background: linear-gradient(145deg, var(--blue-50), var(--mint-100));
+}
+
+.mission-visual {
+  filter: drop-shadow(0 12px 20px rgb(55 151 179 / 12%));
+}
+
+.mission-conditions > div,
+.mission-progress {
+  background: linear-gradient(145deg, var(--blue-50), var(--mint-100));
+  border: 1px solid #d9eef1;
+}
+
+.progress-track {
+  box-shadow: inset 0 2px 5px rgb(35 111 154 / 9%);
+}
+
+.progress-track > span {
+  background: linear-gradient(90deg, #50b9ed, #67ca9c, #f2cb55);
+}
+
+.wallet-balance-card,
+.shop-wallet-strip {
+  background:
+    radial-gradient(circle at 92% 14%, rgb(255 226 138 / 36%), transparent 8rem),
+    radial-gradient(circle at 10% 100%, rgb(201 241 223 / 36%), transparent 9rem),
+    linear-gradient(145deg, #4eb6ec, #1a83ca 58%, #176caf);
+  border: 1px solid rgb(255 255 255 / 58%);
+}
+
+.wallet-mark,
+.shop-wallet-strip__icon {
+  border-radius: 50% 50% 50% 14px;
+  box-shadow: 0 8px 18px rgb(15 88 142 / 15%);
+}
+
+.wallet-tabs,
+.auth-tabs {
+  background: linear-gradient(135deg, #edf8fb, var(--mint-100));
+  border: 1px solid #d7ecee;
+}
+
+.wallet-tabs button.is-selected,
+.auth-tab.is-selected {
+  box-shadow: 0 6px 16px rgb(46 131 165 / 11%);
+}
+
+.reward-categories button {
+  border-color: #d8ecee;
+  box-shadow: 0 6px 14px rgb(52 127 164 / 6%);
+}
+
+.reward-categories button.is-selected {
+  background: linear-gradient(135deg, var(--blue-600), var(--blue-800));
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgb(23 137 213 / 18%);
+}
+
+.reward-product-card {
+  padding: 12px;
+  border-radius: 26px 26px 26px 12px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.reward-product-card:hover {
+  box-shadow: 0 16px 34px rgb(46 131 165 / 14%);
+  transform: translateY(-3px);
+}
+
+.reward-product-card[data-category="food"] .reward-product-visual {
+  background: linear-gradient(145deg, var(--yellow-100), #fffdf4);
+}
+
+.reward-product-card[data-category="life"] .reward-product-visual {
+  background: linear-gradient(145deg, var(--green-100), var(--mint-100));
+}
+
+.reward-product-card[data-category="carrier"] .reward-product-visual {
+  background: linear-gradient(145deg, var(--blue-100), var(--lavender-100));
+}
+
+.reward-product-visual {
+  border: 1px solid rgb(255 255 255 / 85%);
+  border-radius: 21px 21px 21px 10px;
+}
+
+.reward-product-button {
+  background: linear-gradient(135deg, var(--blue-50), var(--mint-100));
+  border-color: #d3eaf0;
+  border-radius: 13px 13px 13px 7px;
+}
+
+.auth-card__icon,
+.profile-avatar {
+  background: linear-gradient(145deg, var(--yellow-100), var(--mint-100));
+  border: 1px solid #e7eccb;
+  border-radius: 50% 50% 50% 18px;
+}
+
+.auth-field input {
+  background: #fbfefd;
+  border-color: #d6e9eb;
+  border-radius: 15px 15px 15px 8px;
+}
+
+.profile-stats article {
+  background: linear-gradient(145deg, var(--blue-50), var(--mint-100));
+  border-color: #d6eaed;
+}
+
+.bottom-navigation {
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  min-height: 74px;
+  padding: 7px;
+  background: rgb(255 255 255 / 92%);
+  border: 1px solid #d7eaee;
+  border-radius: 24px;
+  box-shadow: 0 -6px 30px rgb(48 124 159 / 10%), 0 12px 30px rgb(48 124 159 / 12%);
+}
+
+.nav-item {
+  position: relative;
+  border-radius: 18px 18px 18px 9px;
+}
+
+.nav-item.is-active {
+  color: var(--blue-700);
+  background: linear-gradient(145deg, var(--blue-100), var(--mint-100));
+}
+
+.nav-item.is-active::before {
+  position: absolute;
+  top: 5px;
+  right: calc(50% - 18px);
+  width: 6px;
+  height: 6px;
+  background: var(--yellow-300);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  content: "";
+}
+
+.toast {
+  bottom: 102px;
+  background: linear-gradient(135deg, var(--blue-950), #236c70);
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 18px 18px 18px 8px;
+}
+
 @media (min-width: 640px) {
   .app-shell {
     min-height: calc(100dvh - 32px);
@@ -2643,13 +3161,16 @@ h2 {
   }
 
   .bottom-navigation {
-    bottom: 16px;
+    right: 26px;
+    bottom: 26px;
+    left: 26px;
+    width: calc(100% - 52px);
     border: 1px solid var(--line);
-    border-radius: 0 0 32px 32px;
+    border-radius: 25px;
   }
 
   .hero-card {
-    min-height: 270px;
+    min-height: 305px;
     padding: 36px;
   }
 
@@ -2665,6 +3186,11 @@ h2 {
     left: 33px;
     width: 76px;
     height: 76px;
+  }
+
+  .hero-meadow {
+    width: 270px;
+    height: 88px;
   }
 
   .aircon-card,
