@@ -157,4 +157,4 @@
 - [x] 에어컨 제어 로그인 보호 확인
 - [x] Reward 상품 상세 회귀 테스트
 - [x] Warning/Error Red 상태 확인
-- [ ] 봄 정원 디자인 Render 배포 및 공개 URL 확인
+- [x] 봄 정원 디자인 Render 배포 및 공개 URL 확인
