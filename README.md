@@ -11,7 +11,16 @@ Carrier GreenON은 캐리어 에어컨 사용자를 위한 ESG 친환경 냉방 
 - HTML, CSS, Vanilla JavaScript 기반 모바일 우선 정적 웹앱
 - Supabase Auth와 RLS가 적용된 사용자별 미션·포인트·구매 데이터
 - Open-Meteo 실시간 날씨와 실패 시 샘플 날씨 폴백
+- Motion for JavaScript 기반 화면 진입·캐릭터·꽃·구름 애니메이션
 - Render Static Site용 환경변수 빌드와 Blueprint
+
+## 봄 정원 디자인과 보미
+
+- GreenON 오리지널 바람 요정 `보미(BOMI)`가 홈에서 미션과 냉방 팁을 안내합니다.
+- 보미 이미지 생성용 Gemini 프롬프트는 `docs/GEMINI_CHARACTER_PROMPT.md`에 정리했습니다.
+- 애니메이션은 MIT 라이선스인 [Motion for JavaScript](https://motion.dev/)의 `animate()`와 `stagger()` 패턴을 사용했습니다.
+- 적용 근거와 위치는 `docs/UI_ANIMATION_REFERENCE.md`에서 확인할 수 있습니다.
+- 운영체제의 동작 줄이기 설정을 존중하며, 외부 모듈을 불러오지 못해도 핵심 기능은 계속 작동합니다.
 
 ## 환경변수
 
@@ -70,6 +79,9 @@ Blueprint 최초 생성 화면에서 두 환경변수의 실제 값을 입력합
 - `app.js`: 미션·IoT·포인트·리워드 화면 로직
 - `supabase-client.js`: 고정 버전 Supabase 브라우저 클라이언트
 - `weather-service.js`: Open-Meteo 연결과 샘플 폴백
+- `motion-enhancements.js`: 보미·꽃·구름·화면 전환 Motion 효과
+- `assets/bomi-hero.png`: GreenON 오리지널 캐릭터 히어로 이미지
+- `docs/GEMINI_CHARACTER_PROMPT.md`: Gemini용 캐릭터 생성 프롬프트
 - `scripts/build.sh`: Render production build
 - `render.yaml`: Render Static Site Blueprint
 - `CHECKLIST.md`: 단계별 개발·검증 현황
